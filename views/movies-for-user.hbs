@@ -1,6 +1,8 @@
-<h1>Movies you can watch</h1>
+<h1>{{name}}'s Movies</h1>
 <ul>
  {{#each movies}}
-  <li>{{this.title}}</li>
+  <a class="movie-link" href="#">
+    <li class="user-movies"><img class="user-movies" src="{{image}}"/><div class="movie-title">{{title}}</div></li>
+  </a>
  {{/each}}
 </ul>

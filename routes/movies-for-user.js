@@ -8,9 +8,10 @@ router.get('/:id', function(req, res, next) {
   knex('users')
     .where('users.id', req.params.id)
     .join('movies', 'users.age', '>=', 'movies.minAge')
-    .then( function (movies){
-      console.log(movies);
-      res.render('movies-for-user', {movies:movies})
+    .then( function (movies) {
+      var name = movies[0].name ? movies[0].name : "This user doesn't have any movies"
+      console.log("movies  ", movies);
+      res.render('movies-for-user', {movies:movies, name:movies[0].name})
     })
 });
 

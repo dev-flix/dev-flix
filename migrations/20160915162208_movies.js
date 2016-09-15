@@ -6,6 +6,7 @@ exports.up = function(knex, Promise) {
   table.string('genre')
   table.string('classification')
   table.integer('rating')
+  table.integer('minAge')
   })
 }
 

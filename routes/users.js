@@ -7,9 +7,8 @@ router.get('/', function(req, res, next) {
   // res.send('HELLO WORLD');
   knex('users')
   .then( function (users) {
-      res.send(users)
+      res.render('users', {users:users} )
     })
-
 });
 
 module.exports = router;

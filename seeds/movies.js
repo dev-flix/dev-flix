@@ -5,7 +5,7 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       return Promise.all([
         // Inserts seed entries
-        knex('movies').insert({image:"https://images-na.ssl-images-amazon.com/images/M/MV5BZTAzNWZlNmUtZDEzYi00ZjA5LWIwYjEtZGM1NWE1MjE4YWRhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY1000_CR0,0,671,1000_AL_.jpg", description: "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home.", title: 'Finding Nemo', genre: 'Family', classification: 'G', rating: 82 , minAge: 0}),
+      knex('movies').insert({image:"https://images-na.ssl-images-amazon.com/images/M/MV5BZTAzNWZlNmUtZDEzYi00ZjA5LWIwYjEtZGM1NWE1MjE4YWRhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY1000_CR0,0,671,1000_AL_.jpg", description: "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home.", title: 'Finding Nemo', genre: 'Family', classification: 'G', rating: 82 , minAge: 0}),
 
      knex('movies').insert({image:"https://images-na.ssl-images-amazon.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SY1000_CR0,0,672,1000_AL_.jpg", description: "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.", title: 'Shawshank Redemption', genre: 'Drama', classification: 'R18', rating: 93 , minAge: 18}),
 
@@ -25,7 +25,8 @@ exports.seed = function(knex, Promise) {
 
      knex('movies').insert({image:"https://images-na.ssl-images-amazon.com/images/M/MV5BMjA2Mzg2NDMzNl5BMl5BanBnXkFtZTgwMjcwODUzOTE@._V1_SY1000_SX675_AL_.jpg", description: "A young boy named Kubo must locate a magical suit of armor worn by his late father in order to defeat a vengeful spirit from the past.", title: 'Kubo and the Two Strings', genre: ' Animation, Adventure, Family', classification: 'PG', rating: 83 , minAge: 0}),
 
-     knex('movies').insert({image:"https://images-na.ssl-images-amazon.com/images/M/MV5BMTU1NTE3MjAwNF5BMl5BanBnXkFtZTcwNjEyOTkyMQ@@._V1_.jpg", description: "History of Apple and Microsoft.", title: 'Pirates of Silicon Valley', genre: 'Pirates of Silicon Valley', classification: 'PG', rating: 73 , minAge: 10})
+     knex('movies').insert({image:"http://www.gstatic.com/tv/thumb/dvdboxart/22971/p22971_d_v8_aa.jpg", description: "History of Apple and Microsoft.", title: 'Pirates of Silicon Valley', genre: 'Biography, Drama', classification: 'PG', rating: 73 , minAge: 10}),
+    knex('movies').insert({image:"https://images-na.ssl-images-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_SY1000_CR0,0,674,1000_AL_.jpg", description: "After being held captive in an Afghan cave, a billionaire engineer creates a unique weaponized suit of armor to fight evil.", title: 'Iron Man', genre: 'Action', classification: 'M15', rating: 79 , minAge: 15})
 
       ])
     })

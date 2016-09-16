@@ -1,6 +1,9 @@
-<h1>Current Users</h1>
-<ul>
+<h1>Choose a User</h1>
+  <div class="dropdown">
+   <button class="dropbtn">Users</button>
+   <div class="dropdown-content">
  {{#each users}}
-  <li><a href="/users/{{id}}" >{{name}}</a> {{age}}</li>
+    <a href="/users/{{id}}/movies" >{{name}}</a>
  {{/each}}
-</ul>
+</div>
+</div>

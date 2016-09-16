@@ -1,7 +1,7 @@
 <h1>{{name}}'s Movies</h1>
 <ul>
  {{#each movies}}
-  <a class="movie-link" href="#">
+  <a class="movie-link" href="/movies/{{id}}">
     <li class="user-movies"><img class="user-movies" src="{{image}}"/><div class="movie-title">{{title}}</div></li>
   </a>
  {{/each}}

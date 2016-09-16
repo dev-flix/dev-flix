@@ -3,7 +3,8 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
-var moviesForUser = require('./routes/movies-for-user');
+var movies = require('./routes/movies')
+
 
 var app = express();
 
@@ -18,10 +19,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
-app.use('/:id', moviesForUser)
 
+app.use('/', routes);
+app.use('/movies', movies)
 app.use('/users', users);
+// app.use('/users/test', test)
 
 // app.use( function (req, res, next) {
 //   console.log("req params:  ",req.params);

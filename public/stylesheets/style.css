@@ -53,3 +53,9 @@ a {
 .user-movies img{
  max-height: 30vh;
 }
+.movie-img{
+  max-height: 70vh;
+}
+.movie-info{
+  display: flex;
+}

@@ -3,9 +3,8 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
-var moviesForUser = require('./routes/movies-for-user');
 var movies = require('./routes/movies')
-var test = require('./routes/test')
+
 
 var app = express();
 
@@ -19,7 +18,7 @@ app.set('view engine', 'hbs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
-console.log(path.join(__dirname, 'public'));
+
 
 app.use('/', routes);
 app.use('/movies', movies)

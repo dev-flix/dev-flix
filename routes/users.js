@@ -15,12 +15,12 @@ router.get('/', function(req, res, next) {
 router.get('/:id/movies', function(req, res, next) {
     console.log(req.url);
   var id = req.params.id
-  console.log('id is:  ', id);
+
   knex('users')
     .where('users.id', req.params.id)
     .join('movies', 'users.age', '>=', 'movies.minAge')
     .then( function (movies) {
-      console.log("movies  ", movies);
+      
       // var name = movies[0].name ? movies[0].name : "This user doesn't have any movies"
       var name = "This user doesn't have any movies"
       if(movies) {

@@ -6,11 +6,9 @@ var knex = require('../db')
 /* GET users listing. */
 router.get('/:id', function(req, res, next) {
   console.log(req.url);
-  console.log("in movies info");
   knex('movies')
     .where('id', req.params.id)
-    .then( function (movies) {
-      console.log("movies  ", movies);
+    .then( function (movies) {;
       res.render('movie-info', movies[0])
     })
 });

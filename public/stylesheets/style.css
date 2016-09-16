@@ -43,6 +43,7 @@ body {
     background-color: 	#1E90FF;
 }
 a {
+  text-decoration: none;
   color: #00B7FF;
 }
 .movie-link{

@@ -10,9 +10,11 @@ Returns an array of the whole movie database
 
 ## Resource Information
 
-|Response formats              | JSON |
-| ---------------------------- |:----:|
-|Requires authentication?      | No   |
+|         THING                | YUP  |
+| ---------------------------- |:----:|      
+| Response formats             | JSON |
+| ---------------------------- | ---- |
+| Requires authentication?     | No   |
 
 ## Parameters
 

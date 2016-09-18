@@ -1,28 +1,30 @@
-var express = require('express');
-var path = require('path');
-var bodyParser = require('body-parser');
-var routes = require('./routes/index');
-var users = require('./routes/users');
+var express = require('express')
+var path = require('path')
+var bodyParser = require('body-parser')
+var routes = require('./routes/index')
+var users = require('./routes/users')
 var movies = require('./routes/movies')
+var movieApi = require('./routes/movieApi')
 
 
-var app = express();
+var app = express()
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'hbs')
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(express.static(path.join(__dirname, 'public')))
 
 
-app.use('/', routes);
+app.use('/', routes)
 app.use('/movies', movies)
-app.use('/users', users);
+app.use('/users', users)
+app.use('/api/v1/movies', movieApi)
 // app.use('/users/test', test)
 
 // app.use( function (req, res, next) {
@@ -47,8 +49,8 @@ if (app.get('env') === 'development') {
     res.render('error', {
       message: err.message,
       error: err
-    });
-  });
+    })
+  })
 }
 
 // production error handler
@@ -58,8 +60,8 @@ app.use(function(err, req, res, next) {
   res.render('error', {
     message: err.message,
     error: {}
-  });
-});
+  })
+})
 
 
-module.exports = app;
+module.exports = app

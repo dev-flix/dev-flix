@@ -4,23 +4,27 @@
 
 Returns an array of the whole movie database
 
-## Resource URL
+### Resource URL
 
 `/api/v1/movies/`
 
-## Resource Information
+### Resource Information
 
 |         THING                | YUP  |
 | ---------------------------- |:----:|      
 | Response formats             | JSON |
-| ---------------------------- | ---- |
 | Requires authentication?     | No   |
 
-## Parameters
+### Parameters
 
-`count`
+`none_yet`
 
-## Example result showing 2 movies that are returned
+### Example Request
+
+`GET
+/api/v1/movies/`
+
+### Example Result (showing 2 movies that are returned)
 ```js
 [ { id: 52,
     image: 'https://images-na.ssl-images-amazon.com/images/M/MV5BZTAzNWZlNmUtZDEzYi00ZjA5LWIwYjEtZGM1NWE1MjE4YWRhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY1000_CR0,0,671,1000_AL_.jpg',

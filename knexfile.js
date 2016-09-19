@@ -10,6 +10,24 @@ module.exports = {
     useNullAsDefault: true
   },
 
+  test: {
+    client: 'sqlite3',
+    connection: {
+      filename: __dirname + '/test.sqlite3'
+    },
+    pool: {
+      min: 2,
+      max: 10
+    },
+    migrations: {
+      directory: __dirname + '/migrations',
+      tableName: 'knex_migrations'
+    },
+    seeds: {
+      directory: __dirname + '/seeds' // relative path from the tests/ folder!
+    }
+  },
+
   staging: {
     client: 'postgresql',
     connection: {

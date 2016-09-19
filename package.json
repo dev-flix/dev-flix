@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon server.js",
-    "test": "NODE_ENV=test ava tests/**.js --serial",
-    "unit": "NODE_ENV=test ava tests/unit-tests.js",
+    "test": "NODE_ENV=test ava tests/**.js",
     "integration": "NODE_ENV=test ava tests/integration-tests.js --serial"
   },
   "dependencies": {
